@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Spool, Stop, Play } from "./components/player";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="controls">
+        <Spool role="backward" disabled active onClick={} />
+
+        <Stop disabled active onClick={} />
+
+        <Play disabled active onClick={} />
+
+        <Spool role="forward" disabled active onClick={} />
+      </div>
+      <div className="state">{}</div>
+      <div className="tape-position">{}</div>
     </div>
   );
 }
